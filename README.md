@@ -55,7 +55,7 @@ cd container-tracking-app
 npm install
 ```
 
-3. **Start the development server:**
+3. **Start the development server**:
 
 ```bash
 npm start
@@ -64,43 +64,52 @@ npm start
 The app will be available at http://localhost:3000.
 
 ## How to Use
+
 ### Date Picker Simulation
 
-The app features a date picker in the `sidebar` to simulate the current day. This allows you to navigate through the Stepper component, which shows container events chronologically.
+The app features a `Date Picker` in the `Sidebar` to simulate the current day. This allows you to navigate through the `Stepper Component`, which shows container events chronologically.
 
-- **Purpose**: The date picker is used to simulate different days for testing the stepper navigation.
+- **Purpose**: The ``Date Picker` is used to simulate different days for testing the stepper navigation.
 - **How it Works**: By selecting a date, you can simulate the current day and navigate between events in the container's lifecycle via the stepper.
 
-### Searchbar
+### Searchbar For Card Visibility
 
-The sarchbar lets you toggle the visibility of different cards:
+The `Search Bar` in the navigation component allows users to toggle the visibility of individual cards. Cards can be searched by title, and only those that match the search term will be displayed.
 
 - **Container Information**: Details like shipment number, status, importer, and invoice amount.
 - **Origin and Destination Details**: Displays the container's origin and destination information.
 - **Container Events**: Chronologically displays events like loading, unloading, etc.
 - **Container Route**: Shows the map with the container’s route.
 
-The sidebar also contains a search bar and a dark mode switch.
-Stepper Navigation
+### Sidebar
 
-The Stepper component allows users to navigate through different events of the container. It visually represents the container's progress through different stages, and the current day (set using the date picker) determines which steps are accessible.
-Dark Mode
+The `Sidebar` manages two key features:
 
-The dark mode toggle is available in the navigation bar, allowing users to switch between light and dark themes.
-Technologies Used
+- **Dark Mode Toggle**: Allows users to switch between dark and light modes.
+- **Date Picker**: : Used to simulate the current date for the stepper navigation.
 
-    React: For building the UI components.
-    TypeScript: For type-safe development.
-    Material-UI: Used for stepper and other UI components.
-    React-Leaflet: For rendering the map in the Container Route card.
-    CSS: Custom styles to handle layout, transitions, and dark mode.
+### Stepper Navigation
 
-Future Improvements
+The `Stepper Component` allows users to navigate through different events of the container. It visually represents the container's progress through different stages, and the current day (set using the date picker) determines which steps are accessible.
 
-    Add unit and integration testing.
-    Enhance map features, including real-time tracking.
-    Improve UI/UX based on user feedback.
+### Dark Mode
 
-License
+The `Dark Mode Toggle` is available in the navigation bar, allowing users to switch between light and dark themes.
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+## Technologies Used
+
+- **React**: For building the UI components.
+- **TypeScript**: For type-safe development.
+- **Material-UI**: Used for stepper and other UI components.
+- **React-Leaflet**: For rendering the map in the Container Route card.
+- **CSS**: Custom styles to handle layout, transitions, and dark mode.
+
+## Future Improvements
+
+- Add unit and integration testing.
+- Enhance map features, including real-time tracking.
+- Improve UI/UX based on user feedback.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
