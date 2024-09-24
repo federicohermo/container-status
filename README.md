@@ -66,19 +66,19 @@ The app will be available at http://localhost:3000.
 ## How to Use
 ### Date Picker Simulation
 
-The app features a date picker to simulate the current day. This allows you to navigate through the Stepper component, which shows container events chronologically.
+The app features a date picker in the `sidebar` to simulate the current day. This allows you to navigate through the Stepper component, which shows container events chronologically.
 
-    Purpose: The date picker is used to simulate different days for testing the stepper navigation.
-    How it Works: By selecting a date, you can simulate the current day and navigate between events in the container's lifecycle via the stepper.
+- **Purpose**: The date picker is used to simulate different days for testing the stepper navigation.
+- **How it Works**: By selecting a date, you can simulate the current day and navigate between events in the container's lifecycle via the stepper.
 
-### Sidebar
+### Searchbar
 
-The sidebar lets you toggle the visibility of different cards:
+The sarchbar lets you toggle the visibility of different cards:
 
-    Container Information: Details like shipment number, status, importer, and invoice amount.
-    Origin and Destination Details: Displays the container's origin and destination information.
-    Container Events: Chronologically displays events like loading, unloading, etc.
-    Container Route: Shows the map with the container’s route.
+- **Container Information**: Details like shipment number, status, importer, and invoice amount.
+- **Origin and Destination Details**: Displays the container's origin and destination information.
+- **Container Events**: Chronologically displays events like loading, unloading, etc.
+- **Container Route**: Shows the map with the container’s route.
 
 The sidebar also contains a search bar and a dark mode switch.
 Stepper Navigation
