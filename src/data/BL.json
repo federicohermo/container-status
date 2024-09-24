@@ -1,0 +1,1010 @@
+{
+    "advance_payment": null,
+    "ais_data": {
+        "discharge_port_code": "No code",
+        "discharge_port_country_code": "Unknown",
+        "discharge_port_date": null,
+        "discharge_port_date_label": "No label",
+        "discharge_port_name": "Unknown port",
+        "id": 1,
+        "last_event_date": null,
+        "last_event_description": "No description",
+        "last_event_voyage": "No voyage",
+        "last_vessel_position_latitude": null,
+        "last_vessel_position_longitude": null,
+        "last_vessel_position_updated_at": null,
+        "shipment_id": 1,
+        "updated_at": null,
+        "vessel": null,
+        "vessel_id": null
+    },
+    "cache_expires": null,
+    "client_id": 13,
+    "containers": [
+        {
+            "events": [
+                {
+                    "actual": true,
+                    "container_id": 1,
+                    "description": "Gate out",
+                    "event_code": "GTOT",
+                    "event_date": "2024-07-22T07:40:00",
+                    "event_type": "EQUIPMENT",
+                    "facility": {
+                        "bic_code": null,
+                        "country_code": "PY",
+                        "id": 4,
+                        "latitude": null,
+                        "location": null,
+                        "location_id": null,
+                        "locode": null,
+                        "longitude": null,
+                        "name": "TERMINAL PUERTO SEGURO",
+                        "smdg_code": null
+                    },
+                    "facility_id": 4,
+                    "id": 1,
+                    "is_additional_event": false,
+                    "location": {
+                        "country": "Paraguay",
+                        "country_code": "PY",
+                        "destination_shipments": [],
+                        "id": 4,
+                        "latitude": -25.28646,
+                        "locode": "PYASU",
+                        "longitude": -57.647,
+                        "name": "Asuncion",
+                        "origin_shipments": [],
+                        "state": "Asuncion",
+                        "timezone": "America/Asuncion"
+                    },
+                    "location_id": 4,
+                    "order_id": 1,
+                    "status": "LTS",
+                    "transport_type": null,
+                    "type": "land",
+                    "vessel": null,
+                    "vessel_id": null,
+                    "voyage": null
+                },
+                {
+                    "actual": true,
+                    "container_id": 1,
+                    "description": "Gate in",
+                    "event_code": "GTIN",
+                    "event_date": "2024-07-22T19:02:00",
+                    "event_type": "EQUIPMENT",
+                    "facility": {
+                        "bic_code": null,
+                        "country_code": "PY",
+                        "id": 4,
+                        "latitude": null,
+                        "location": null,
+                        "location_id": null,
+                        "locode": null,
+                        "longitude": null,
+                        "name": "TERMINAL PUERTO SEGURO",
+                        "smdg_code": null
+                    },
+                    "facility_id": 4,
+                    "id": 2,
+                    "is_additional_event": false,
+                    "location": {
+                        "country": "Paraguay",
+                        "country_code": "PY",
+                        "destination_shipments": [],
+                        "id": 4,
+                        "latitude": -25.28646,
+                        "locode": "PYASU",
+                        "longitude": -57.647,
+                        "name": "Asuncion",
+                        "origin_shipments": [],
+                        "state": "Asuncion",
+                        "timezone": "America/Asuncion"
+                    },
+                    "location_id": 4,
+                    "order_id": 2,
+                    "status": "CGI",
+                    "transport_type": null,
+                    "type": "land",
+                    "vessel": null,
+                    "vessel_id": null,
+                    "voyage": null
+                },
+                {
+                    "actual": true,
+                    "container_id": 1,
+                    "description": "Load",
+                    "event_code": "LOAD",
+                    "event_date": "2024-08-07T14:20:00",
+                    "event_type": "EQUIPMENT",
+                    "facility": {
+                        "bic_code": null,
+                        "country_code": "PY",
+                        "id": 4,
+                        "latitude": null,
+                        "location": null,
+                        "location_id": null,
+                        "locode": null,
+                        "longitude": null,
+                        "name": "TERMINAL PUERTO SEGURO",
+                        "smdg_code": null
+                    },
+                    "facility_id": 4,
+                    "id": 3,
+                    "is_additional_event": false,
+                    "location": {
+                        "country": "Paraguay",
+                        "country_code": "PY",
+                        "destination_shipments": [],
+                        "id": 4,
+                        "latitude": -25.28646,
+                        "locode": "PYASU",
+                        "longitude": -57.647,
+                        "name": "Asuncion",
+                        "origin_shipments": [],
+                        "state": "Asuncion",
+                        "timezone": "America/Asuncion"
+                    },
+                    "location_id": 4,
+                    "order_id": 3,
+                    "status": "CLL",
+                    "transport_type": null,
+                    "type": "sea",
+                    "vessel": {
+                        "ais_data": [],
+                        "call_sign": "ZPUE",
+                        "flag": "PY",
+                        "id": 3,
+                        "imo": null,
+                        "mmsi": 755004318,
+                        "name": "NAUTIC TWIN"
+                    },
+                    "vessel_id": 3,
+                    "voyage": "420S"
+                },
+                {
+                    "actual": true,
+                    "container_id": 1,
+                    "description": "Vessel departure",
+                    "event_code": "DEPA",
+                    "event_date": "2024-08-07T22:30:00",
+                    "event_type": "TRANSPORT",
+                    "facility": {
+                        "bic_code": null,
+                        "country_code": "PY",
+                        "id": 4,
+                        "latitude": null,
+                        "location": null,
+                        "location_id": null,
+                        "locode": null,
+                        "longitude": null,
+                        "name": "TERMINAL PUERTO SEGURO",
+                        "smdg_code": null
+                    },
+                    "facility_id": 4,
+                    "id": 4,
+                    "is_additional_event": false,
+                    "location": {
+                        "country": "Paraguay",
+                        "country_code": "PY",
+                        "destination_shipments": [],
+                        "id": 4,
+                        "latitude": -25.28646,
+                        "locode": "PYASU",
+                        "longitude": -57.647,
+                        "name": "Asuncion",
+                        "origin_shipments": [],
+                        "state": "Asuncion",
+                        "timezone": "America/Asuncion"
+                    },
+                    "location_id": 4,
+                    "order_id": 4,
+                    "status": "VDL",
+                    "transport_type": "VESSEL",
+                    "type": "sea",
+                    "vessel": {
+                        "ais_data": [],
+                        "call_sign": "ZPUE",
+                        "flag": "PY",
+                        "id": 3,
+                        "imo": null,
+                        "mmsi": 755004318,
+                        "name": "NAUTIC TWIN"
+                    },
+                    "vessel_id": 3,
+                    "voyage": "420S"
+                },
+                {
+                    "actual": true,
+                    "container_id": 1,
+                    "description": "Vessel arrival",
+                    "event_code": "ARRI",
+                    "event_date": "2024-08-17T04:30:00",
+                    "event_type": "TRANSPORT",
+                    "facility": {
+                        "bic_code": "UYMVDKKVA",
+                        "country_code": "UY",
+                        "id": 2,
+                        "latitude": -34.905278,
+                        "location": null,
+                        "location_id": null,
+                        "locode": "UYMVD",
+                        "longitude": -56.220278,
+                        "name": "TERMINAL CUENCA DEL PLATA",
+                        "smdg_code": "TCDP"
+                    },
+                    "facility_id": 2,
+                    "id": 5,
+                    "is_additional_event": false,
+                    "location": {
+                        "country": "United States",
+                        "country_code": "US",
+                        "destination_shipments": [
+                            1,
+                            2
+                        ],
+                        "id": 3,
+                        "latitude": 40.71427,
+                        "locode": "USNYC",
+                        "longitude": -74.00597,
+                        "name": "New York City",
+                        "origin_shipments": [],
+                        "state": "New York",
+                        "timezone": "America/New_York"
+                    },
+                    "location_id": 3,
+                    "order_id": 5,
+                    "status": "VAT",
+                    "transport_type": "VESSEL",
+                    "type": "sea",
+                    "vessel": {
+                        "ais_data": [],
+                        "call_sign": "ZPUE",
+                        "flag": "PY",
+                        "id": 3,
+                        "imo": null,
+                        "mmsi": 755004318,
+                        "name": "NAUTIC TWIN"
+                    },
+                    "vessel_id": 3,
+                    "voyage": "420S"
+                },
+                {
+                    "actual": true,
+                    "container_id": 1,
+                    "description": "Discharge",
+                    "event_code": "DISC",
+                    "event_date": "2024-08-17T13:07:00",
+                    "event_type": "EQUIPMENT",
+                    "facility": null,
+                    "facility_id": null,
+                    "id": 6,
+                    "is_additional_event": false,
+                    "location": {
+                        "country": "United States",
+                        "country_code": "US",
+                        "destination_shipments": [
+                            1,
+                            2
+                        ],
+                        "id": 3,
+                        "latitude": 40.71427,
+                        "locode": "USNYC",
+                        "longitude": -74.00597,
+                        "name": "New York City",
+                        "origin_shipments": [],
+                        "state": "New York",
+                        "timezone": "America/New_York"
+                    },
+                    "location_id": 3,
+                    "order_id": 6,
+                    "status": "CDT",
+                    "transport_type": null,
+                    "type": "sea",
+                    "vessel": {
+                        "ais_data": [],
+                        "call_sign": "ZPUE",
+                        "flag": "PY",
+                        "id": 3,
+                        "imo": null,
+                        "mmsi": 755004318,
+                        "name": "NAUTIC TWIN"
+                    },
+                    "vessel_id": 3,
+                    "voyage": "420S"
+                },
+                {
+                    "actual": true,
+                    "container_id": 1,
+                    "description": "Load",
+                    "event_code": "LOAD",
+                    "event_date": "2024-08-28T18:58:00",
+                    "event_type": "EQUIPMENT",
+                    "facility": null,
+                    "facility_id": null,
+                    "id": 7,
+                    "is_additional_event": false,
+                    "location": {
+                        "country": "United States",
+                        "country_code": "US",
+                        "destination_shipments": [
+                            1,
+                            2
+                        ],
+                        "id": 3,
+                        "latitude": 40.71427,
+                        "locode": "USNYC",
+                        "longitude": -74.00597,
+                        "name": "New York City",
+                        "origin_shipments": [],
+                        "state": "New York",
+                        "timezone": "America/New_York"
+                    },
+                    "location_id": 3,
+                    "order_id": 7,
+                    "status": "CLT",
+                    "transport_type": null,
+                    "type": "sea",
+                    "vessel": {
+                        "ais_data": [],
+                        "call_sign": "D5UB8",
+                        "flag": "LR",
+                        "id": 1,
+                        "imo": 9302102,
+                        "mmsi": 636092911,
+                        "name": "RDO ENDEAVOUR"
+                    },
+                    "vessel_id": 1,
+                    "voyage": "434E"
+                },
+                {
+                    "actual": true,
+                    "container_id": 1,
+                    "description": "Vessel departure",
+                    "event_code": "DEPA",
+                    "event_date": "2024-08-28T23:29:00",
+                    "event_type": "TRANSPORT",
+                    "facility": null,
+                    "facility_id": null,
+                    "id": 8,
+                    "is_additional_event": false,
+                    "location": {
+                        "country": "United States",
+                        "country_code": "US",
+                        "destination_shipments": [
+                            1,
+                            2
+                        ],
+                        "id": 3,
+                        "latitude": 40.71427,
+                        "locode": "USNYC",
+                        "longitude": -74.00597,
+                        "name": "New York City",
+                        "origin_shipments": [],
+                        "state": "New York",
+                        "timezone": "America/New_York"
+                    },
+                    "location_id": 3,
+                    "order_id": 8,
+                    "status": "VDT",
+                    "transport_type": "VESSEL",
+                    "type": "sea",
+                    "vessel": {
+                        "ais_data": [],
+                        "call_sign": "D5UB8",
+                        "flag": "LR",
+                        "id": 1,
+                        "imo": 9302102,
+                        "mmsi": 636092911,
+                        "name": "RDO ENDEAVOUR"
+                    },
+                    "vessel_id": 1,
+                    "voyage": "434E"
+                },
+                {
+                    "actual": false,
+                    "container_id": 1,
+                    "description": "Vessel arrival",
+                    "event_code": "ARRI",
+                    "event_date": "2024-09-28T14:00:00",
+                    "event_type": "TRANSPORT",
+                    "facility": {
+                        "bic_code": null,
+                        "country_code": "SG",
+                        "id": 1,
+                        "latitude": null,
+                        "location": null,
+                        "location_id": null,
+                        "locode": null,
+                        "longitude": null,
+                        "name": "PSA Singapore Terminal",
+                        "smdg_code": null
+                    },
+                    "facility_id": 1,
+                    "id": 9,
+                    "is_additional_event": false,
+                    "location": {
+                        "country": "Uruguay",
+                        "country_code": "UY",
+                        "destination_shipments": [],
+                        "id": 2,
+                        "latitude": -34.90328,
+                        "locode": "UYMVD",
+                        "longitude": -56.18816,
+                        "name": "Montevideo",
+                        "origin_shipments": [],
+                        "state": "Departamento de Montevideo",
+                        "timezone": "America/Montevideo"
+                    },
+                    "location_id": 2,
+                    "order_id": 9,
+                    "status": "VAT",
+                    "transport_type": "VESSEL",
+                    "type": "sea",
+                    "vessel": {
+                        "ais_data": [],
+                        "call_sign": "D5UB8",
+                        "flag": "LR",
+                        "id": 1,
+                        "imo": 9302102,
+                        "mmsi": 636092911,
+                        "name": "RDO ENDEAVOUR"
+                    },
+                    "vessel_id": 1,
+                    "voyage": "434E"
+                },
+                {
+                    "actual": false,
+                    "container_id": 1,
+                    "description": "Vessel departure",
+                    "event_code": "DEPA",
+                    "event_date": "2024-10-02T17:00:00",
+                    "event_type": "TRANSPORT",
+                    "facility": {
+                        "bic_code": null,
+                        "country_code": "SG",
+                        "id": 1,
+                        "latitude": null,
+                        "location": null,
+                        "location_id": null,
+                        "locode": null,
+                        "longitude": null,
+                        "name": "PSA Singapore Terminal",
+                        "smdg_code": null
+                    },
+                    "facility_id": 1,
+                    "id": 10,
+                    "is_additional_event": false,
+                    "location": {
+                        "country": "Uruguay",
+                        "country_code": "UY",
+                        "destination_shipments": [],
+                        "id": 2,
+                        "latitude": -34.90328,
+                        "locode": "UYMVD",
+                        "longitude": -56.18816,
+                        "name": "Montevideo",
+                        "origin_shipments": [],
+                        "state": "Departamento de Montevideo",
+                        "timezone": "America/Montevideo"
+                    },
+                    "location_id": 2,
+                    "order_id": 10,
+                    "status": "VDT",
+                    "transport_type": "VESSEL",
+                    "type": "sea",
+                    "vessel": {
+                        "ais_data": [],
+                        "call_sign": "VRGE7",
+                        "flag": "HK",
+                        "id": 2,
+                        "imo": 9407160,
+                        "mmsi": 477655900,
+                        "name": "SEASPAN EMPIRE"
+                    },
+                    "vessel_id": 2,
+                    "voyage": "439N"
+                },
+                {
+                    "actual": false,
+                    "container_id": 1,
+                    "description": "Vessel arrival",
+                    "event_code": "ARRI",
+                    "event_date": "2024-10-08T08:30:00",
+                    "event_type": "TRANSPORT",
+                    "facility": {
+                        "bic_code": null,
+                        "country_code": "PH",
+                        "id": 3,
+                        "latitude": null,
+                        "location": null,
+                        "location_id": null,
+                        "locode": null,
+                        "longitude": null,
+                        "name": "Manila Intl Container Tmnl North",
+                        "smdg_code": null
+                    },
+                    "facility_id": 3,
+                    "id": 11,
+                    "is_additional_event": false,
+                    "location": {
+                        "country": "Colombia",
+                        "country_code": "CO",
+                        "destination_shipments": [],
+                        "id": 1,
+                        "latitude": 10.39972,
+                        "locode": "COCTG",
+                        "longitude": -75.51444,
+                        "name": "Cartagena",
+                        "origin_shipments": [
+                            1,
+                            2
+                        ],
+                        "state": "Departamento de Bolivar",
+                        "timezone": "America/Bogota"
+                    },
+                    "location_id": 1,
+                    "order_id": 11,
+                    "status": "VAD",
+                    "transport_type": "VESSEL",
+                    "type": "sea",
+                    "vessel": {
+                        "ais_data": [],
+                        "call_sign": "VRGE7",
+                        "flag": "HK",
+                        "id": 2,
+                        "imo": 9407160,
+                        "mmsi": 477655900,
+                        "name": "SEASPAN EMPIRE"
+                    },
+                    "vessel_id": 2,
+                    "voyage": "439N"
+                }
+            ],
+            "id": 1,
+            "is_status_from_sealine": true,
+            "iso_code": "45G1",
+            "number": "TCNU5816564",
+            "shipment_id": 1,
+            "size_type": "40' High Cube Dry",
+            "status": "IN_TRANSIT"
+        }
+    ],
+    "created_at": "2024-09-20T19:26:03.635663",
+    "destination_location": {
+        "country": "United States",
+        "country_code": "US",
+        "events": [
+            5,
+            6,
+            7,
+            8,
+            24
+        ],
+        "facilities": [],
+        "id": 3,
+        "latitude": 40.71427,
+        "locode": "USNYC",
+        "longitude": -74.00597,
+        "name": "New York City",
+        "state": "New York",
+        "timezone": "America/New_York"
+    },
+    "destination_location_id": 3,
+    "eta": "2024-10-08T08:30:00",
+    "id": 1,
+    "importer": "Prima Natural Foods Inc.",
+    "importer_payed_at": null,
+    "invoice_amount": "37780.0",
+    "invoice_number": "",
+    "is_status_from_sealine": null,
+    "metadata_value": null,
+    "miscellaneous_expenses": null,
+    "operation_id": null,
+    "origin_location": {
+        "country": "Colombia",
+        "country_code": "CO",
+        "events": [
+            11,
+            20,
+            21,
+            22,
+            23
+        ],
+        "facilities": [],
+        "id": 1,
+        "latitude": 10.39972,
+        "locode": "COCTG",
+        "longitude": -75.51444,
+        "name": "Cartagena",
+        "state": "Departamento de Bolivar",
+        "timezone": "America/Bogota"
+    },
+    "origin_location_id": 1,
+    "reference_number": "Operación FMIS-64",
+    "route_data": {
+        "id": 1,
+        "pin_latitude": -17.80724346845019,
+        "pin_longitude": 64.56037866866842,
+        "route": [
+            {
+                "path": [
+                    [
+                        -25.2637,
+                        -57.5759
+                    ],
+                    [
+                        -32.0346,
+                        -51.677
+                    ],
+                    [
+                        -32.0475,
+                        -51.6696
+                    ],
+                    [
+                        -32.0608,
+                        -51.6689
+                    ],
+                    [
+                        -32.0744,
+                        -51.675
+                    ],
+                    [
+                        -33.3768,
+                        -52.5712
+                    ],
+                    [
+                        -33.3899,
+                        -52.5806
+                    ],
+                    [
+                        -33.4026,
+                        -52.5906
+                    ],
+                    [
+                        -33.415,
+                        -52.601
+                    ],
+                    [
+                        -34.5569,
+                        -53.6028
+                    ],
+                    [
+                        -34.5684,
+                        -53.614
+                    ],
+                    [
+                        -34.5789,
+                        -53.6261
+                    ],
+                    [
+                        -34.5882,
+                        -53.6392
+                    ],
+                    [
+                        -34.8279,
+                        -54.0085
+                    ],
+                    [
+                        -34.8383,
+                        -54.0257
+                    ],
+                    [
+                        -34.8477,
+                        -54.0435
+                    ],
+                    [
+                        -34.856,
+                        -54.0619
+                    ],
+                    [
+                        -35.2121,
+                        -54.9141
+                    ],
+                    [
+                        -35.2192,
+                        -54.9295
+                    ],
+                    [
+                        -35.2275,
+                        -54.9442
+                    ],
+                    [
+                        -35.237,
+                        -54.9583
+                    ],
+                    [
+                        -35.6916,
+                        -55.5853
+                    ],
+                    [
+                        -35.6974,
+                        -55.5984
+                    ],
+                    [
+                        -35.6954,
+                        -55.6103
+                    ],
+                    [
+                        -35.6855,
+                        -55.6209
+                    ],
+                    [
+                        -34.9033,
+                        -56.1882
+                    ]
+                ],
+                "transport_type": "VESSEL",
+                "type": "SEA"
+            },
+            {
+                "path": [
+                    [
+                        -34.9033,
+                        -56.1882
+                    ],
+                    [
+                        -35.6818,
+                        -55.6236
+                    ],
+                    [
+                        -35.6955,
+                        -55.6101
+                    ],
+                    [
+                        -35.7036,
+                        -55.5938
+                    ],
+                    [
+                        -35.7062,
+                        -55.5748
+                    ],
+                    [
+                        -35.0095,
+                        20.0889
+                    ],
+                    [
+                        -35.0088,
+                        20.1132
+                    ],
+                    [
+                        -35.0071,
+                        20.1375
+                    ],
+                    [
+                        -35.0045,
+                        20.1617
+                    ],
+                    [
+                        -34.4172,
+                        24.7879
+                    ],
+                    [
+                        -34.4143,
+                        24.8081
+                    ],
+                    [
+                        -34.411,
+                        24.8282
+                    ],
+                    [
+                        -34.4072,
+                        24.8483
+                    ],
+                    [
+                        -34.2232,
+                        25.758
+                    ],
+                    [
+                        -34.2187,
+                        25.7779
+                    ],
+                    [
+                        -34.2133,
+                        25.7975
+                    ],
+                    [
+                        -34.2071,
+                        25.8169
+                    ],
+                    [
+                        -23.4133,
+                        57.1868
+                    ],
+                    [
+                        -17.80724346845019,
+                        64.56037866866842
+                    ],
+                    [
+                        5.6357,
+                        95.3946
+                    ],
+                    [
+                        5.6429,
+                        95.4074
+                    ],
+                    [
+                        5.646,
+                        95.4212
+                    ],
+                    [
+                        5.6452,
+                        95.4359
+                    ],
+                    [
+                        5.2573,
+                        97.4687
+                    ],
+                    [
+                        5.2524,
+                        97.4871
+                    ],
+                    [
+                        5.2453,
+                        97.5047
+                    ],
+                    [
+                        5.2358,
+                        97.5212
+                    ],
+                    [
+                        1.1397,
+                        103.7235
+                    ],
+                    [
+                        1.1345,
+                        103.7351
+                    ],
+                    [
+                        1.1336,
+                        103.7471
+                    ],
+                    [
+                        1.1369,
+                        103.7594
+                    ],
+                    [
+                        1.1876,
+                        103.8733
+                    ],
+                    [
+                        1.1944,
+                        103.8826
+                    ],
+                    [
+                        1.2034,
+                        103.886
+                    ],
+                    [
+                        1.2148,
+                        103.8834
+                    ],
+                    [
+                        1.2897,
+                        103.8501
+                    ]
+                ],
+                "transport_type": "VESSEL",
+                "type": "SEA"
+            },
+            {
+                "path": [
+                    [
+                        1.2897,
+                        103.8501
+                    ],
+                    [
+                        1.2189,
+                        103.8816
+                    ],
+                    [
+                        1.2073,
+                        103.89
+                    ],
+                    [
+                        1.2031,
+                        103.9012
+                    ],
+                    [
+                        1.2063,
+                        103.9153
+                    ],
+                    [
+                        1.3578,
+                        104.2559
+                    ],
+                    [
+                        1.3649,
+                        104.27
+                    ],
+                    [
+                        1.3731,
+                        104.2833
+                    ],
+                    [
+                        1.3826,
+                        104.2958
+                    ],
+                    [
+                        9.1545,
+                        113.7302
+                    ],
+                    [
+                        9.1642,
+                        113.7426
+                    ],
+                    [
+                        9.1734,
+                        113.7554
+                    ],
+                    [
+                        9.1821,
+                        113.7686
+                    ],
+                    [
+                        9.7633,
+                        114.6977
+                    ],
+                    [
+                        9.7743,
+                        114.7146
+                    ],
+                    [
+                        9.7858,
+                        114.7312
+                    ],
+                    [
+                        9.7977,
+                        114.7475
+                    ],
+                    [
+                        14.4859,
+                        120.9493
+                    ],
+                    [
+                        14.4967,
+                        120.9586
+                    ],
+                    [
+                        14.5076,
+                        120.9585
+                    ],
+                    [
+                        14.5186,
+                        120.9492
+                    ],
+                    [
+                        14.522,
+                        120.9448
+                    ],
+                    [
+                        14.5314,
+                        120.937
+                    ],
+                    [
+                        14.5416,
+                        120.9359
+                    ],
+                    [
+                        14.5526,
+                        120.9415
+                    ],
+                    [
+                        14.6042,
+                        120.9822
+                    ]
+                ],
+                "transport_type": "VESSEL",
+                "type": "SEA"
+            }
+        ],
+        "shipment_id": 1
+    },
+    "sealine_code": "MAEU",
+    "sealine_name": "Maersk",
+    "shipment_number": "242432008",
+    "status": "IN_TRANSIT",
+    "type": "BL",
+    "updated_at": null
+}

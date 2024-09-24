@@ -1,0 +1,108 @@
+.nav-bar {
+    height: 15vh !important; 
+    display: block !important; 
+    align-content: center !important; 
+    z-index: 10000 !important;
+    background-color: var(--background-color) !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.nav-bar.dark-mode {
+    background-color: var(--background-color-dark) !important;
+}
+
+.navigation-tools {
+    margin-right: 1rem;
+    align-items: center;
+    gap: 1rem
+  }
+
+.searchbar {
+    display: flex;
+    align-items: 'center';
+    background-color: var(--lighter-color);
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin-right: 20px;
+    transition: width 0.3s ease-in;
+    width: 45px;
+}
+  
+.open {
+    width: 300px; 
+    padding: 12px;
+}
+
+.searchbar.dark-mode {
+    background-color: var(--dark-blue-color);
+}
+
+.menu-bar {
+    background-color: var(--lighter-color);
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin-right: inherit !important;
+}
+
+.menu-bar.dark-mode {
+    background-color: var(--dark-blue-color);
+}
+
+.menu-button {
+    background-color: var(--lighter-color);
+}
+
+.menu-button.dark-mode {
+    background-color: var(--dark-blue-color);
+}
+
+.css-1wy8uaa-MuiButtonBase-root-MuiPickersDay-root.Mui-selected,
+.css-23p0if-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+    background-color: var(--primary-color) !important;
+}
+
+.css-18pjc51-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+    color: var(--primary-color) !important;
+}
+
+.css-1vezd3z-MuiFormControl-root-MuiTextField-root .MuiInputBase-input.Mui-focused {
+    border-color: var(--primary-color) !important;
+}
+
+.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: var(--primary-color) !important;
+}
+
+.MuiInputBase-root{
+    border-radius: 8px;
+}
+.MuiInputBase-input{ 
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px
+}
+
+.MuiButtonBase-root {
+    border-color: transparent !important;   
+}
+
+.MuiToggleButton-root {
+    background-color: var(--lighter-color) !important;
+}
+
+.MuiToggleButton-root.dark-mode {
+    background-color: var(--dark-blue-color) !important;
+}
+
+@media (max-width: 767px) {
+    .open {
+        width: 200px;
+    }
+  }
+
+  @media (max-height: 375px) {
+    .nav-bar {
+        height: 20vh !important;
+    }
+  }

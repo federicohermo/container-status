@@ -1,0 +1,68 @@
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiStepIcon-root.Mui-active.css-dgyt09-MuiSvgIcon-root-MuiStepIcon-root {
+  color: #00a76f;
+}
+
+.css-dgyt09-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
+  color: var(--primary-color)
+}
+
+.css-1hv8oq8-MuiStepLabel-label {
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+}
+
+.mui-active-step-label {
+  color: #00a76f; /* Active step text color */
+}
+
+.mui-stepper {
+  padding: 20px;
+}
+
+.step-label {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.custom-step-icon {
+  color: #00a76f; /* Custom color for active step icon */
+}
+
+.step-description {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.step-description li {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+.step-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.step-buttons button {
+  margin-right: 10px;
+  font-weight: bold;
+  text-transform: none;
+}
+
+@media (max-width: 767px) {
+  .step-description li {
+    font-size: 0.65em;
+  }
+  .css-s46dlk-MuiButtonBase-root-MuiButton-root{
+    font-size: 0.6rem !important;
+  }
+  .css-33fq5f-MuiButtonBase-root-MuiButton-root {
+    font-size: 0.6rem !important;
+  }
+  .css-1atj2ma-MuiStepLabel-root .MuiStepLabel-label {
+    font-size: 0.6rem !important;
+  }
+}
+  

@@ -1,25 +1,88 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import ContainerInfo from './components/ContainerInfo'; // Import your ContainerInfo component
+import Navigation from './components/Navigation';
+import { ThemeProvider } from './context/ThemeContext';
+import { useTheme } from './hooks/useTheme';
+import './styles/App.css'; // Import your global or app-specific styles
+import BL from './data/BL.json'; // Container Data
+import Cards from './data/Cards.json'; // Cards Data
+import Sidebar from './components/SideBar';
 
-function App() {
+const AppContent: React.FC = () => {
+  const [containerData, setContainerData] = useState<any>(null);
+  const [filteredCard, setFilteredCard] = useState<any>(null);
+  const [cardsData, setCardsData] = useState<any>(null);
+  const { isDarkMode } = useTheme();
+  const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
+  const [sidebarToggle, setSidebarToggle] = useState<boolean>(false);
+
+  useEffect(() => {
+    fetchContainerData();
+  }, []);
+
+  // Simulate fetching data from an API
+  const fetchContainerData = async () => {
+    // Simulate delay
+    setTimeout(() => {
+      setContainerData(BL);
+      setCardsData(Cards.cards); 
+      setFilteredCard(Cards.cards); // Initially set the filtered data as the full dataset
+    }, 1000);
+  };
+
+  // Function to filter container data based on search input
+  const handleSearch = (searchTerm: string) => {
+    
+    if (searchTerm !== '') {
+      // Filter data based on the search term (for example, searching by container name)
+      const filtered = filteredCard && filteredCard.filter((item: any) => {
+        return item.title.toLowerCase().includes(searchTerm.toLowerCase())
+    });
+      
+      setFilteredCard(filtered);
+    }
+    else {
+      setFilteredCard(cardsData)
+    }
+  };
+
+  const handleDateChange = (date: Date | null) => {
+    setSelectedDate(date);
+  };
+
+  const handleSidebarToggle = (sidebarToggle: boolean) => {
+    setSidebarToggle(sidebarToggle)
+  };
+
+  if (!containerData) {
+    return <div>Loading...</div>; // Placeholder while data is being fetched
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className={`App ${isDarkMode ? 'dark-mode' : ''}`}>
+        <div style={{width:'100%', display: 'flex'}}>
+        <Sidebar 
+          onDateChange={handleDateChange}
+          sidebarToggle={sidebarToggle}
+        />
+        </div>
+        {/* Navigation bar to search for individual cards and toggle dark mode */}
+        <Navigation
+          onSearch={handleSearch} 
+          onDateChange={handleDateChange}
+          onSidebarToggle={handleSidebarToggle}
+        />
+        {/* Pass the filtered container data to ContainerInfo */}
+        <ContainerInfo containerData={containerData} filteredCard={filteredCard} selectedDate={selectedDate && selectedDate}/>
+      </div>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <ThemeProvider>
+        <AppContent />
+    </ThemeProvider>
   );
 }
 

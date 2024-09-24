@@ -1,0 +1,117 @@
+/* ContainerInfo.css */
+
+.container-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  grid-template-areas:
+      "info origin destination"
+      "events route route";
+  grid-gap: 10px 84px; 
+  padding: 20px;
+  padding-right: 50px;
+  background-color: var(--info-bg-color);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  min-width: 75%;
+  min-height: 80vh;
+  margin-top: 15vh;
+  width: 90%;
+}
+
+.container-info.dark-mode {
+  background-color: var(--info-bg-color-dark);
+}
+
+/* Media query for larger screens (e.g., PC monitors or TVs) */
+@media (min-width: 1500px) {
+  .container-info {
+      grid-template-columns: unset; 
+      grid-gap: 0px !important;
+  }
+}
+
+/* Media query for larger screens (e.g., PC monitors or TVs) */
+@media (min-width: 1100px) and (max-width: 1253px) {
+  .container-info {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 3 columns grid */
+      grid-template-areas: none;
+      width: 60%;
+      grid-gap: 10px 60px 
+  }
+}
+
+/* Media query for larger screens (e.g., PC monitors or TVs) */
+@media (min-width: 1024px) and (max-width: 1100px) {
+  .container-info {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 3 columns grid */
+      grid-template-areas: none;
+      width: 60%;
+      grid-gap: 10px 10px 
+  }
+}
+
+/* Media query for medium screens (e.g., laptops) */
+@media (max-width: 1024px) {
+  .container-info {
+      grid-template-columns: 1fr;
+      grid-template-areas: none;
+      width: 80%;
+      min-width: 0%
+  }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+  .container-info {
+      display: flex;
+      flex-direction: column; /* Stack items vertically on mobile screens */
+      gap: 16px; /* Space between patient cards */
+      width: 70%;
+  }
+  .title {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-base);
+    color: var(--primary-color);
+  }
+  p {
+    font-size: 0.75rem !important;
+  }
+}
+
+.container-sidebar {
+  background-color: var(--sidebar-bg-color);
+  padding: 20px;
+  color: var(--light-color);
+  height: 100vh;
+}
+
+.container-main {
+  padding: 20px;
+  background-color: var(--white-color);
+} 
+  
+.title {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-base);
+  color: var(--primary-color);
+}
+
+.info-block {
+  margin-bottom: var(--spacing-base);
+}
+
+p {
+  margin: 0;
+  padding: var(--spacing-base) 0;
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+
+
+
+
+
+
+  
+  

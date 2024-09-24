@@ -1,0 +1,30 @@
+:root {
+  --primary-color: #00a76f;
+  --primary-color-hover: #007867;
+  --secondary-color: #6c757d;
+  --success-color: #198754;
+  --info-color: #0dcaf0;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --lighter-color: #f4f6f8;
+  --light-color: #f8f9fa;
+  --dark-color: #141a21;
+  --dark-blue-color: #28323d;
+  --white-color: #ffffff;
+  
+
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+
+  --background-color: var(--white-color);
+  --background-color-dark: var(--dark-color);
+  --card-bg-color: var(--white-color);
+  --card-bg-color-dark: var(--dark-color);
+  --info-bg-color: var(--lighter-color);
+  --info-bg-color-dark: var(--dark-blue-color);
+  --sidebar-bg-color: #1e293b;
+  --header-bg-color: var(--primary-color);
+  --text-color: var(--dark-color);
+}
+  
+  

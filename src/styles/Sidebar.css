@@ -1,0 +1,42 @@
+.sidebar {
+    max-width: 20% !important;
+    background-color: var(--sidebar-bg) !important;
+    padding: 40px 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    border-right: 1px solid var(--border-color) !important;
+    
+    background-color: var(--background-color) !important;
+    z-index: 1 !important;
+    height: 100% !important;
+    transform: translateX(-100vw) !important;
+    transition: transform 0.5s ease-in, opacity 0.5s ease-in !important; /* Add explicit properties and units */
+    opacity: 0 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.toggle {
+    transform: translateX(0) !important; /* Translates the sidebar into view */
+    opacity: 1 !important; /* Sets the opacity to fully visible */
+}
+
+.sidebar.dark-mode {
+    background-color: var(--background-color-dark) !important;
+}
+
+.sidebar-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: transparent;
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        padding: 60px 0px !important;
+    }
+  }
+
+
+
