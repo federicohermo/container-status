@@ -94,7 +94,7 @@ The `Stepper Component` allows users to navigate through different events of the
 
 ### Dark Mode
 
-The `Dark Mode Toggle` is available in the navigation bar, allowing users to switch between light and dark themes.
+The `Dark Mode Toggle` is available in the navigation bar, allowing users to switch between light and dark themes. A `Theme Context` alongside a custom React Hook called `useTheme` are used to access the `Dark Mode` across the entire application.
 
 ## Technologies Used
 
@@ -102,6 +102,8 @@ The `Dark Mode Toggle` is available in the navigation bar, allowing users to swi
 - **TypeScript**: For type-safe development.
 - **Material-UI**: Used for stepper and other UI components.
 - **React-Leaflet**: For rendering the map in the Container Route card.
+- **Webpack**: For bundling the assets and managing the build process.
+- **Babel**: For transpiling modern JavaScript and TypeScript code.
 - **CSS**: Custom styles to handle layout, transitions, and dark mode.
 
 ## Future Improvements
