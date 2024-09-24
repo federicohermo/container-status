@@ -41,37 +41,37 @@ src/
  └── index.tsx                   # Application entry point
 ```
 
-# Installation and Setup
+## Installation and Setup
 
-Clone the repository:
+1. **Clone the repository**:
 ```bash
 git clone https://github.com/your-repo/container-tracking-app.git
 cd container-tracking-app
 ```
 
-Install the dependencies:
+2. **Install the dependencies**:
 
-bash
-
+```bash
 npm install
+```
 
-Start the development server:
+3. **Start the development server:**
 
-bash
-
+```bash
 npm start
+```
 
 The app will be available at http://localhost:3000.
 
 ## How to Use
-## Date Picker Simulation
+### Date Picker Simulation
 
 The app features a date picker to simulate the current day. This allows you to navigate through the Stepper component, which shows container events chronologically.
 
     Purpose: The date picker is used to simulate different days for testing the stepper navigation.
     How it Works: By selecting a date, you can simulate the current day and navigate between events in the container's lifecycle via the stepper.
 
-## Sidebar
+### Sidebar
 
 The sidebar lets you toggle the visibility of different cards:
 
