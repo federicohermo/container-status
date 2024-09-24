@@ -1,46 +1,107 @@
-# Getting Started with Create React App
+# Container Tracking App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The **Container Tracking App** is a React-based application designed to display and manage information about shipping containers. Users can view key container details, events, routes, and navigate through steps using an interactive stepper. The app also includes functionality for a dark mode switch, a date picker to simulate the current day, and a search bar to toggle the visibility of cards.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Card-Based UI**: The app uses cards to display container information, origin and destination details, events, and routes.
+- **Search Bar for Card Visibility**: The search bar allows users to show/hide individual cards by searching their titles.
+- **Stepper Navigation**: A stepper component allows users to navigate through different events related to the container.
+- **Date Picker Simulation**: A date picker is provided to simulate the current day and navigate through the stepper component.
+- **Dark Mode**: Toggle between dark and light modes for a customized user experience.
+- **Sidebar**: The sidebar manages dark mode and date simulation.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Folder Structure
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+bash
 
-### `npm test`
+src/
+ ├── components/
+ │    ├── Card.tsx              # Card component for displaying container information
+ │    ├── ContainerInfo.tsx      # Container information component
+ │    ├── ContainerEvents.tsx    # Container events component
+ │    ├── ContainerMap.tsx       # Map displaying container route
+ │    ├── Navigation.tsx         # Navigation component with search, dark mode, and date picker
+ │    ├── Sidebar.tsx            # Sidebar to toggle card visibility
+ │    └── Stepper.tsx            # Stepper for event navigation
+ ├── context/
+ │    └── ThemeContext.tsx       # Context for dark mode theme management
+ ├── hooks/
+ │    └── useTheme.tsx           # Custom hook for theme management
+ ├── data/
+ │    ├── BL.json                # Container data for the app
+ │    ├── Cards.json             # Cards metadata used to render UI cards
+ ├── styles/
+ │    ├── App.css                # Global styles
+ │    ├── Card.css               # Card styles
+ │    ├── Sidebar.css            # Sidebar styles
+ │    ├── Stepper.css            # Stepper styles
+ ├── App.tsx                     # Main app component
+ └── index.tsx                   # Application entry point
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Installation and Setup
 
-### `npm run build`
+    Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    bash
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+git clone https://github.com/your-repo/container-tracking-app.git
+cd container-tracking-app
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install the dependencies:
 
-### `npm run eject`
+bash
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+npm install
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Start the development server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+bash
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    npm start
 
-## Learn More
+    The app will be available at http://localhost:3000.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+How to Use
+Date Picker Simulation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The app features a date picker to simulate the current day. This allows you to navigate through the Stepper component, which shows container events chronologically.
+
+    Purpose: The date picker is used to simulate different days for testing the stepper navigation.
+    How it Works: By selecting a date, you can simulate the current day and navigate between events in the container's lifecycle via the stepper.
+
+Sidebar
+
+The sidebar lets you toggle the visibility of different cards:
+
+    Container Information: Details like shipment number, status, importer, and invoice amount.
+    Origin and Destination Details: Displays the container's origin and destination information.
+    Container Events: Chronologically displays events like loading, unloading, etc.
+    Container Route: Shows the map with the container’s route.
+
+The sidebar also contains a search bar and a dark mode switch.
+Stepper Navigation
+
+The Stepper component allows users to navigate through different events of the container. It visually represents the container's progress through different stages, and the current day (set using the date picker) determines which steps are accessible.
+Dark Mode
+
+The dark mode toggle is available in the navigation bar, allowing users to switch between light and dark themes.
+Technologies Used
+
+    React: For building the UI components.
+    TypeScript: For type-safe development.
+    Material-UI: Used for stepper and other UI components.
+    React-Leaflet: For rendering the map in the Container Route card.
+    CSS: Custom styles to handle layout, transitions, and dark mode.
+
+Future Improvements
+
+    Add unit and integration testing.
+    Enhance map features, including real-time tracking.
+    Improve UI/UX based on user feedback.
+
+License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
