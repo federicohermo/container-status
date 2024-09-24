@@ -114,4 +114,4 @@ The `Dark Mode Toggle` is available in the navigation bar, allowing users to swi
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License. See the [`LICENSE`](./LICENSE) file for details.
