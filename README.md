@@ -15,8 +15,7 @@ The **Container Tracking App** is a React-based application designed to display 
 
 ## Folder Structure
 
-bash
-
+```bash
 src/
  ├── components/
  │    ├── Card.tsx              # Card component for displaying container information
@@ -43,10 +42,8 @@ src/
 
 # Installation and Setup
 
-    Clone the repository:
-
-    bash
-
+Clone the repository:
+```bash
 git clone https://github.com/your-repo/container-tracking-app.git
 cd container-tracking-app
 
@@ -60,19 +57,19 @@ Start the development server:
 
 bash
 
-    npm start
+npm start
 
-    The app will be available at http://localhost:3000.
+The app will be available at http://localhost:3000.
 
-How to Use
-Date Picker Simulation
+## How to Use
+## Date Picker Simulation
 
 The app features a date picker to simulate the current day. This allows you to navigate through the Stepper component, which shows container events chronologically.
 
     Purpose: The date picker is used to simulate different days for testing the stepper navigation.
     How it Works: By selecting a date, you can simulate the current day and navigate between events in the container's lifecycle via the stepper.
 
-Sidebar
+## Sidebar
 
 The sidebar lets you toggle the visibility of different cards:
 
