@@ -39,6 +39,7 @@ src/
  │    ├── Stepper.css            # Stepper styles
  ├── App.tsx                     # Main app component
  └── index.tsx                   # Application entry point
+```
 
 # Installation and Setup
 
@@ -46,6 +47,7 @@ Clone the repository:
 ```bash
 git clone https://github.com/your-repo/container-tracking-app.git
 cd container-tracking-app
+```
 
 Install the dependencies:
 
