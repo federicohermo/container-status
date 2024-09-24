@@ -94,7 +94,7 @@ The `Stepper Component` allows users to navigate through different events of the
 
 ### Dark Mode
 
-The `Dark Mode Toggle` is available in the navigation bar, allowing users to switch between light and dark themes. A `Theme Context` alongside a custom React Hook called `useTheme` are used to access the `Dark Mode` across the entire application.
+The `Dark Mode Toggle` is available in the navigation bar, allowing users to switch between light and dark themes. A [`Theme Context`](./src/context/ThemeContext.tsx) alongside a custom React Hook called [`useTheme`](./src/hooks/useTheme.tsx) are used to access the `Dark Mode` across the entire application.
 
 ## Technologies Used
 
