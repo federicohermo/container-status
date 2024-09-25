@@ -95,6 +95,21 @@
     background-color: var(--dark-blue-color) !important;
 }
 
+.MuiPopper-root{
+    transform: translateX(10%) translateY(70%) !important;
+} 
+
+.date-button-icon {
+    padding: 11px !important;
+    background-color: var(--lighter-color) !important;
+    border-radius: 8px !important;
+    font-size: 1.75rem !important;
+}
+
+.date-button-icon.dark-mode {
+    background-color: var(--dark-blue-color) !important;
+}
+
 @media (max-width: 767px) {
     .open {
         width: 200px;

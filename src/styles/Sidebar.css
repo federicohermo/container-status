@@ -1,5 +1,5 @@
 .sidebar {
-    max-width: 20% !important;
+    max-width: 10% !important;
     background-color: var(--sidebar-bg) !important;
     padding: 40px 10px !important;
     display: flex !important;
