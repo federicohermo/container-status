@@ -10,7 +10,7 @@
   flex-direction: column;
   transition: transform  0.3s ease, opacity 0.3s ease-in-out;
   width: fit-content;
-  min-width: 60%;
+  min-width: 90%;
   opacity: 1;
 }
 
