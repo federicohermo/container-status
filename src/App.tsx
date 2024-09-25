@@ -62,19 +62,22 @@ const AppContent: React.FC = () => {
   return (
       <div className={`App ${isDarkMode ? 'dark-mode' : ''}`}>
         <div style={{width:'100%', display: 'flex'}}>
-        <Sidebar 
-          onDateChange={handleDateChange}
-          sidebarToggle={sidebarToggle}
-        />
-        </div>
-        {/* Navigation bar to search for individual cards and toggle dark mode */}
-        <Navigation
-          onSearch={handleSearch} 
-          onDateChange={handleDateChange}
-          onSidebarToggle={handleSidebarToggle}
-        />
-        {/* Pass the filtered container data to ContainerInfo */}
-        <ContainerInfo containerData={containerData} filteredCard={filteredCard} selectedDate={selectedDate && selectedDate}/>
+          {/* Sidebar to toggle dark mode and select a date */}
+          <Sidebar 
+            onDateChange={handleDateChange}
+            sidebarToggle={sidebarToggle}
+          />
+          </div>
+
+          {/* Navigation bar to search for individual cards and toggle the Sidebar */}
+          <Navigation
+            onSearch={handleSearch} 
+            onDateChange={handleDateChange}
+            onSidebarToggle={handleSidebarToggle}
+          />
+          
+          {/* Pass the filtered container data to ContainerInfo */}
+          <ContainerInfo containerData={containerData} filteredCard={filteredCard} selectedDate={selectedDate && selectedDate}/>
       </div>
   );
 };
