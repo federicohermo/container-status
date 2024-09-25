@@ -2,11 +2,11 @@
 
 .container-info {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)); 
   grid-template-areas:
       "info origin destination"
       "events route route";
-  grid-gap: 10px 84px; 
+  grid-gap: 10px 50px; 
   padding: 20px;
   padding-right: 50px;
   background-color: var(--info-bg-color);
@@ -22,36 +22,18 @@
   background-color: var(--info-bg-color-dark);
 }
 
-/* Media query for larger screens (e.g., PC monitors or TVs) */
-@media (min-width: 1500px) {
-  .container-info {
-      grid-template-columns: unset; 
-      grid-gap: 0px !important;
-  }
-}
 
-/* Media query for larger screens (e.g., PC monitors or TVs) */
-@media (min-width: 1100px) and (max-width: 1253px) {
+
+ @media (min-width: 978px) and (max-width: 1140px) {
   .container-info {
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 3 columns grid */
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       grid-template-areas: none;
-      width: 60%;
+      width: 90%;
       grid-gap: 10px 60px 
   }
 }
 
-/* Media query for larger screens (e.g., PC monitors or TVs) */
-@media (min-width: 1024px) and (max-width: 1100px) {
-  .container-info {
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 3 columns grid */
-      grid-template-areas: none;
-      width: 60%;
-      grid-gap: 10px 10px 
-  }
-}
-
-/* Media query for medium screens (e.g., laptops) */
-@media (max-width: 1024px) {
+@media (min-width: 767px) and (max-width: 978px) {
   .container-info {
       grid-template-columns: 1fr;
       grid-template-areas: none;
@@ -60,12 +42,11 @@
   }
 }
 
-/* Media query for mobile screens */
 @media (max-width: 767px) {
   .container-info {
       display: flex;
-      flex-direction: column; /* Stack items vertically on mobile screens */
-      gap: 16px; /* Space between patient cards */
+      flex-direction: column; 
+      gap: 16px; 
       width: 70%;
   }
   .title {
@@ -76,7 +57,7 @@
   p {
     font-size: 0.75rem !important;
   }
-}
+}  
 
 .container-sidebar {
   background-color: var(--sidebar-bg-color);
