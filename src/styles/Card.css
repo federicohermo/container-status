@@ -17,6 +17,9 @@
   .route{
     margin-left: 0px !important;
   }
+  .card {
+    grid-area: unset !important;
+  }
 } 
 
 .card.dark-mode {
