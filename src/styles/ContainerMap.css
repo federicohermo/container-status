@@ -1,8 +1,7 @@
 /* ContainerMap.css */
 
 .leaflet-container {
-    max-width: fit-content;
-    max-height: fit-content;
+    max-width: 100vh !important;
     min-width: 400px;
     min-height: 400px;
     border-radius: 8px;

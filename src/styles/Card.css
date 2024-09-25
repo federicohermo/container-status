@@ -46,5 +46,6 @@
 
 .route {
   margin-left: 3.5rem;
+  grid-column: span 2;
 }
   

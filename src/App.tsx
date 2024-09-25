@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ContainerInfo from './components/ContainerInfo'; // Import your ContainerInfo component
 import Navigation from './components/Navigation';
+import Loading from './components/Loading';
 import { ThemeProvider } from './context/ThemeContext';
 import { useTheme } from './hooks/useTheme';
 import './styles/App.css'; // Import your global or app-specific styles
@@ -55,7 +56,7 @@ const AppContent: React.FC = () => {
   };
 
   if (!containerData) {
-    return <div>Loading...</div>; // Placeholder while data is being fetched
+    return <Loading message='Loading...'/>; // Placeholder while data is being fetched
   }
 
   return (
