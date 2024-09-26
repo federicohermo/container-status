@@ -23,12 +23,16 @@ const AppContent: React.FC = () => {
 
   // Simulate fetching data from an API
   const fetchContainerData = async () => {
-    // Simulate delay
-    setTimeout(() => {
-      setContainerData(BL);
-      setCardsData(Cards.cards); 
-      setFilteredCard(Cards.cards); // Initially set the filtered data as the full dataset
-    }, 1000);
+    try {
+      // Simulate delay
+      setTimeout(() => {
+        setContainerData(BL);
+        setCardsData(Cards.cards); 
+        setFilteredCard(Cards.cards); // Initially set the filtered data as the full dataset
+      }, 1000);
+    } catch(error) {
+      console.log(error)
+    }
   };
 
   // Function to filter container data based on search input
