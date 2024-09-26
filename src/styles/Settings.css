@@ -97,12 +97,18 @@
 
 .MuiPopper-root{
     transform: translateX(10%) translateY(70%) !important;
+    position: fixed !important;
 } 
 
-/* .MuiPaper-root{
+.MuiPopper-root.dark-mode .MuiPaper-root {
     background-color: var(--dark-blue-color) !important;
     color: var(--light-color) !important;
-}  */
+}
+
+.MuiPopper-root.dark-mode .MuiPaper-root .MuiPickersDay-root,
+.MuiPopper-root.dark-mode .MuiPaper-root .MuiDayCalendar-weekDayLabel {
+    color: var(--light-color) !important;
+}
 
 .MuiPickersYear-yearButton.Mui-selected {
     background-color: var(--primary-color) !important;
