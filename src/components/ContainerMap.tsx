@@ -62,8 +62,8 @@ const ContainerMap: React.FC<ContainerMapProps> = ({ route, firstCoordinateFacil
             <h3>Facility: {firstCoordinateFacility}</h3> : 
             <h3>Start Location</h3>
             }
-            <p>Latitude: {firstCoordinate[0]}</p>
-            <p>Longitude: {firstCoordinate[1]}</p>
+            <p><strong>Latitude:</strong> {firstCoordinate[0]}</p>
+            <p><strong>Longitude:</strong> {firstCoordinate[1]}</p>
           </div>
         </Popup>
       </Marker>

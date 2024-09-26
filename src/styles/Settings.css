@@ -99,6 +99,20 @@
     transform: translateX(10%) translateY(70%) !important;
 } 
 
+/* .MuiPaper-root{
+    background-color: var(--dark-blue-color) !important;
+    color: var(--light-color) !important;
+}  */
+
+.MuiPickersYear-yearButton.Mui-selected {
+    background-color: var(--primary-color) !important;
+}
+
+.MuiSvgIcon-root{ 
+    fill: var(--primary-color) !important; 
+    font-size: 1.75rem !important;
+}
+
 .date-button-icon {
     padding: 11px !important;
     background-color: var(--lighter-color) !important;

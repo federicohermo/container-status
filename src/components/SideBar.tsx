@@ -47,7 +47,6 @@ const Sidebar: React.FC<SidebarProps> = ({ onDateChange, sidebarToggle }) => {
         <IconButton 
           onClick={() => setOpen(true)} 
           className={`date-button-icon ${isDarkMode ? 'dark-mode' : ''}`}
-          sx={{'& .MuiSvgIcon-root': {fill: 'var(--primary-color)', fontSize: '1.75rem'}}}
         >
           <CalendarToday />
         </IconButton>
@@ -59,7 +58,9 @@ const Sidebar: React.FC<SidebarProps> = ({ onDateChange, sidebarToggle }) => {
           onClose={() => setOpen(false)}
           value={selectedDate}
           onChange={handleDateChange}
-          sx={{display:'none'}}
+          className='pop'
+          sx={{display:'none', '& .MuiPopper-root': isDarkMode ? 
+            {backgroundColor: 'var(--dark-blue-color) !important', color: 'var(--light-color) !important' }:{}}}
             // '& .MuiSvgIcon-root': isDarkMode ? {fill: 'var(--light-color)'} : {},
             // '& .MuiInputBase-root': isDarkMode ? {color:'var(--light-color)'} : {},
             // '& .MuiFormLabel-root': isDarkMode ? {color: 'var(--light-color)'}: {},

@@ -20,7 +20,7 @@ const ContainerInfo: React.FC<ContainerInfoProps> = ({ containerData, filteredCa
         if (card.title.includes("Details") ) {
           // Card for Container Details 
           return(
-            <Card key={card.id} title={card.title} gridArea={filteredCard.length < 4 ? null : card.gridArea}>
+            <Card key={card.id} title={card.title.replace("Details", "")} gridArea={filteredCard.length < 4 ? null : card.gridArea}>
               <p><strong>Country:</strong> {containerData[card.gridArea+"_location"].country}</p>
               <p><strong>City:</strong> {containerData[card.gridArea+"_location"].name}</p>
               <p><strong>State:</strong> {containerData[card.gridArea+"_location"].state}</p>
@@ -30,7 +30,7 @@ const ContainerInfo: React.FC<ContainerInfoProps> = ({ containerData, filteredCa
         else if (card.title.includes("Info")) {
           // Card for Container Information 
           return(
-            <Card key={card.id} title={card.title} gridArea={filteredCard.length < 4 ? null : card.gridArea}>
+            <Card key={card.id} title={card.title.replace("Container ", "")} gridArea={filteredCard.length < 4 ? null : card.gridArea}>
               <p><strong>Container Shipment Number:</strong> {containerData.shipment_number}</p>
               <p><strong>Status:</strong> 
               {containerData.status.split("_").map((str: string) => {
@@ -45,7 +45,7 @@ const ContainerInfo: React.FC<ContainerInfoProps> = ({ containerData, filteredCa
         else if (card.title.includes("Event")) {
           // Card for Container Events
           return containerData.containers.map((event:any) => 
-            <Card key={card.id} title={card.title} gridArea={filteredCard.length < 4 ? null : card.gridArea}>
+            <Card key={card.id} title={"Shipment Status"} gridArea={filteredCard.length < 4 ? null : card.gridArea}>
               <ContainerEvents containerEvent={event.events} selectedDate={selectedDate} />
             </Card>
           )
@@ -53,7 +53,7 @@ const ContainerInfo: React.FC<ContainerInfoProps> = ({ containerData, filteredCa
         else if (card.title.includes("Route")) {
           // Card for Map 
           return(
-          <Card key={card.id} title={card.title} gridArea={filteredCard.length < 4 ? null : card.gridArea}>
+          <Card key={card.id} title={"Where Is My Container?"} gridArea={filteredCard.length < 4 ? null : card.gridArea}>
             <ContainerMap 
               route={containerData.route_data.route}
               firstCoordinateFacility={containerData.containers[0].events[0].facility.name} // This should come from route probably but I could only extract it from events
