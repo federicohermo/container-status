@@ -58,7 +58,7 @@ const ContainerEvents = ({ containerEvent, selectedDate }: { containerEvent: any
   const latestAccessibleStep = getLatestAccessibleStep();
 
   return (
-      <GenericStepper steps={steps} orientation="vertical" latestAccesibleStep={latestAccessibleStep} selectedDate={selectedDate} />
+      <GenericStepper steps={steps} orientation="vertical" latestAccessibleStep={latestAccessibleStep} selectedDate={selectedDate} />
   );
 };
 

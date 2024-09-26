@@ -22,7 +22,7 @@ interface LocationEvents {
 interface GenericStepperProps {
   steps: LocationEvents[];
   orientation?: 'horizontal' | 'vertical';
-  latestAccesibleStep?: any;
+  latestAccessibleStep?: any;
   selectedDate?: Date | null;
 }
 
@@ -40,16 +40,17 @@ const CustomStepLabel = styled(StepLabel)<{ active: boolean }>(({ active }) => (
 const GenericStepper: React.FC<GenericStepperProps> = ({
   steps,
   orientation = 'vertical',
-  latestAccesibleStep,
+  latestAccessibleStep,
   selectedDate
 }) => {
-  const [activeStep, setActiveStep] = useState(latestAccesibleStep);
+  const [activeStep, setActiveStep] = useState(latestAccessibleStep);
   const {isDarkMode} = useTheme()
 
   useEffect(() => {
     // Reset the active step based on the selected date
-    setActiveStep(latestAccesibleStep);
-  }, [selectedDate, latestAccesibleStep]);
+    setActiveStep(latestAccessibleStep);
+    console.log(latestAccessibleStep)
+  }, [selectedDate, latestAccessibleStep]);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep:any) => prevActiveStep + 1);
@@ -112,7 +113,7 @@ const GenericStepper: React.FC<GenericStepperProps> = ({
                   <Button
                     variant="contained"
                     onClick={handleNext}
-                    disabled={activeStep >= latestAccesibleStep}
+                    disabled={activeStep >= latestAccessibleStep && activeStep !== steps.length - 1 }
                     sx={{
                       mt: 1,
                       backgroundColor: isDarkMode ? 'var(--secondary-color)' : 'var(--dark-color)',
