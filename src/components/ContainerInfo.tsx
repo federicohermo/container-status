@@ -1,9 +1,10 @@
 import React from 'react';
 import Card from './Card';
-import ContainerMap from './ContainerMap';
 import '../styles/ContainerInfo.css'; // Additional styling if needed
 import ContainerEvents from './ContainerEvents';
 import { useTheme } from '../hooks/useTheme';
+
+const LazyMap = React.lazy(() => import('./ContainerMap'));
 
 interface ContainerInfoProps {
   containerData: any;
@@ -55,7 +56,8 @@ const ContainerInfo: React.FC<ContainerInfoProps> = ({ containerData, filteredCa
           return(
           <Card key={card.id} title={"Where Is My Container?"} gridArea={filteredCard.length < 4 ? null : card.gridArea}>
             <div>
-            <ContainerMap 
+
+            <LazyMap 
               route={containerData.route_data.route}
               firstCoordinateFacility={containerData.containers[0].events[0].facility.name} // This should come from route probably but I could only extract it from events
               lastCoordinateFacility={containerData.containers[0].events[containerData.containers[0].events.length -1].facility.name} // Same here
