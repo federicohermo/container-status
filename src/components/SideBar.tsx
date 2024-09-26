@@ -5,7 +5,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { AppBar, Toolbar, ToggleButton, IconButton } from '@mui/material';
 import { CalendarToday } from '@mui/icons-material';
-import '../styles/Sidebar.css'; // Custom sidebar styles
+import '../styles/Sidebar.css'; 
 import '../styles/Settings.css'
 
 interface SidebarProps {
