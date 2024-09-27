@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { AppBar, Toolbar, InputBase, Typography, ToggleButton } from '@mui/material';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import ToggleButton from '@mui/material/ToggleButton';
+import InputBase from '@mui/material/InputBase';
+import Typography from '@mui/material/Typography';
 import SearchIcon from '@mui/icons-material/Search';
 import { useTheme } from '../hooks/useTheme'
 import { styled } from '@mui/system';

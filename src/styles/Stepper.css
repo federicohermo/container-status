@@ -1,18 +1,24 @@
-.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiStepIcon-root.Mui-active.css-dgyt09-MuiSvgIcon-root-MuiStepIcon-root {
-  color: #00a76f;
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiStepIcon-root.Mui-active.MuiSvgIcon-root-MuiStepIcon-root {
+  color: #00a76f !important;
 }
 
-.css-dgyt09-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
-  color: var(--primary-color)
+.MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
+  color: var(--primary-color) !important
 }
 
-.css-1hv8oq8-MuiStepLabel-label {
-  font-family: var(--font-primary);
-  font-size: 0.875rem;
+.MuiStepLabel-label {
+  font-family: var(--font-primary) !important;
+  font-size: 0.875rem ;
+}
+
+.MuiStepLabel-root.Mui-disabled .MuiSvgIcon-root {
+  font-family: var(--font-primary) !important;
+  fill: #ccc !important; 
+  font-size: 1.75rem !important;
 }
 
 .mui-active-step-label {
-  color: #00a76f; /* Active step text color */
+  color: #00a76f !important; /* Active step text color */
 }
 
 .mui-stepper {
@@ -49,6 +55,50 @@
   margin-right: 10px;
   font-weight: bold;
   text-transform: none;
+}
+
+.mui-stepper-back-button {
+  margin-top: 1rem !important;
+  margin-right: 1rem !important;
+  margin-bottom: 20px !important;
+  background-color: #e0e0e0 !important;
+  color: #333 !important;
+  border-radius: 8px !important;
+  padding: 10px 20px !important;
+}
+
+.mui-stepper-back-button.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26) !important;
+}
+
+.mui-stepper-back-button:hover {
+  background-color: #ccc !important;
+}
+
+.mui-stepper-next-button {
+  margin-top: 1rem !important;
+  background-color: var(--dark-color) !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  padding: 10px 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.mui-stepper-next-button.dark-mode {
+  background-color: var(--secondary-color) !important;
+}
+
+.mui-stepper-next-button.Mui-disabled {
+  background-color: #ccc !important;
+}
+
+.mui-stepper-next-button.Mui-disabled.dark-mode {
+  background-color: rgba(0, 0, 0, 0.12) !important;
+  color: rgba(0, 0, 0, 0.26) !important;
+}
+
+.mui-stepper-next-button:hover {
+  background-color: var(--primary-color-hover) !important;
 }
 
 @media (max-width: 767px) {

@@ -58,8 +58,7 @@
     background-color: var(--dark-blue-color);
 }
 
-.css-1wy8uaa-MuiButtonBase-root-MuiPickersDay-root.Mui-selected,
-.css-23p0if-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+.MuiPickersDay-root.Mui-selected {
     background-color: var(--primary-color) !important;
 }
 
@@ -114,7 +113,8 @@
     background-color: var(--primary-color) !important;
 }
 
-.MuiSvgIcon-root{ 
+.MuiSvgIcon-root.Mui-completed,
+.MuiSvgIcon-root.Mui-active{ 
     fill: var(--primary-color) !important; 
     font-size: 1.75rem !important;
 }
@@ -124,10 +124,16 @@
     background-color: var(--lighter-color) !important;
     border-radius: 8px !important;
     font-size: 1.75rem !important;
+    fill: var(--primary-color) !important;
 }
 
 .date-button-icon.dark-mode {
     background-color: var(--dark-blue-color) !important;
+}
+
+.navigation-tools .MuiSvgIcon-root {
+    fill: var(--primary-color) !important;
+    font-size: 1.75rem !important;
 }
 
 @media (max-width: 767px) {

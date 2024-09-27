@@ -6,9 +6,8 @@ import StepContent from '@mui/material/StepContent';
 import Button from '@mui/material/Button';
 import StepConnector from '@mui/material/StepConnector';
 import { styled } from '@mui/system';
-import { StyledEngineProvider } from '@mui/material/styles';
-import { useTheme } from '../hooks/useTheme'
-import '../styles/Stepper.css'
+import { useTheme } from '../hooks/useTheme';
+import '../styles/Stepper.css'; // Ensure external CSS handles most styles
 
 interface LocationEvents {
   location: string;
@@ -22,46 +21,46 @@ interface LocationEvents {
 interface GenericStepperProps {
   steps: LocationEvents[];
   orientation?: 'horizontal' | 'vertical';
-  latestAccessibleStep?: any;
+  latestAccessibleStep?: number;
   selectedDate?: Date | null;
 }
 
+// Custom Connector Style
 const CustomConnector = styled(StepConnector)({
   '& .MuiStepConnector-line': {
     borderColor: '#00a76f', // Customize the connector line color
   },
 });
 
+// Custom StepLabel for the active state
 const CustomStepLabel = styled(StepLabel)<{ active: boolean }>(({ active }) => ({
   color: 'white',  // Change text color based on active state
-  fontWeight: active ? 'bold' : 'normal',  // Optional: Bold text for active step
+  fontWeight: active ? 'bold' : 'normal',
 }));
 
-const GenericStepper: React.FC<GenericStepperProps> = ({
+const GenericStepper: React.FC<GenericStepperProps> = React.memo(({
   steps,
   orientation = 'vertical',
-  latestAccessibleStep,
+  latestAccessibleStep = 0,
   selectedDate
 }) => {
   const [activeStep, setActiveStep] = useState(latestAccessibleStep);
-  const {isDarkMode} = useTheme()
+  const { isDarkMode } = useTheme();
 
   useEffect(() => {
-    // Reset the active step based on the selected date
+    // Reset active step based on the selected date
     setActiveStep(latestAccessibleStep);
-    console.log(latestAccessibleStep)
   }, [selectedDate, latestAccessibleStep]);
 
   const handleNext = () => {
-    setActiveStep((prevActiveStep:any) => prevActiveStep + 1);
+    setActiveStep((prevStep: number) => prevStep + 1);
   };
 
   const handleBack = () => {
-    setActiveStep((prevActiveStep:any) => prevActiveStep - 1);
+    setActiveStep((prevStep: number) => prevStep - 1);
   };
 
   return (
-    <StyledEngineProvider injectFirst>
     <div>
       <Stepper
         activeStep={activeStep}
@@ -78,8 +77,10 @@ const GenericStepper: React.FC<GenericStepperProps> = ({
                   color: activeStep >= index ? '#00a76f' : '#ccc', // Active step icon color
                 },
               }}
-              sx={{'& .MuiStepLabel-label': activeStep >= index ? (isDarkMode ? {color:'white', fontSize: '1rem'} : {color:'black', fontSize: '1rem'}) : (isDarkMode ? {color:'#ccc'}: {color:'var(--secondary-color)'}),
-                  '& .MuiStepIcon-text': activeStep >= index ? {fill: 'var(--light-color)'}:  {fill: 'var(--dark-color)'}}}
+              sx={{
+                '& .MuiStepLabel-label': activeStep >= index ? { color: isDarkMode ? 'white' : 'black', fontSize: '1rem' } : { color: isDarkMode ? '#ccc' : 'var(--secondary-color)' },
+                '& .MuiStepIcon-text': activeStep >= index ? { fill: 'var(--light-color)' } : { fill: 'var(--dark-color)' }
+              }}
             >
               {step.location}
             </CustomStepLabel>
@@ -96,34 +97,15 @@ const GenericStepper: React.FC<GenericStepperProps> = ({
                   <Button
                     disabled={activeStep === 0}
                     onClick={handleBack}
-                    sx={{
-                      mt: 1,
-                      mr: 1,
-                      backgroundColor: '#e0e0e0',
-                      color: '#333',
-                      borderRadius: '8px',
-                      padding: '10px 20px',
-                      '&:hover': {
-                        backgroundColor: '#ccc',
-                      },
-                    }}
+                    className={`mui-stepper-back-button ${isDarkMode ? 'dark-mode' : ''}`}
                   >
                     Back
                   </Button>
                   <Button
                     variant="contained"
                     onClick={handleNext}
-                    disabled={activeStep >= latestAccessibleStep && activeStep !== steps.length - 1 }
-                    sx={{
-                      mt: 1,
-                      backgroundColor: isDarkMode ? 'var(--secondary-color)' : 'var(--dark-color)',
-                      color: '#fff',
-                      borderRadius: '8px',
-                      padding: '10px 20px',
-                      '&:hover': {
-                        backgroundColor: 'var(--primary-color-hover)',
-                      },
-                    }}
+                    disabled={activeStep >= latestAccessibleStep && activeStep !== steps.length - 1}
+                    className={`mui-stepper-next-button ${isDarkMode ? 'dark-mode' : ''}`}
                   >
                     {activeStep === steps.length - 1 ? 'Finish' : 'Continue'}
                   </Button>
@@ -134,8 +116,7 @@ const GenericStepper: React.FC<GenericStepperProps> = ({
         ))}
       </Stepper>
     </div>
-    </StyledEngineProvider>
   );
-};
+});
 
 export default GenericStepper;
