@@ -6,6 +6,30 @@ import { useTheme } from '../hooks/useTheme';
 
 const LazyMap = React.lazy(() => import('./ContainerMap'));
 
+const groupEventsByLocation = (events: any) => {
+  return events.reduce((acc: any, event: any) => {
+    const locationName = event.location.name + ", " + event.location.country;
+    if (!acc[locationName]) {
+      acc[locationName] = { events: [], actual: false };
+    }
+    
+    acc[locationName].events.push({
+      description: event.description,
+      eventDate: new Date(event.event_date).toLocaleDateString(),
+      eventTime: new Date(event.event_date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      position: [event.location.latitude, event.location.longitude],
+      facility: event.facility ? (event.facility.name !== null ? event.facility.name : 'null') : 'null'
+    });
+    
+    // If this event is marked as actual, set the location as actual
+    if (event.actual) {
+      acc[locationName].actual = true;
+    }
+
+    return acc;
+  }, {});
+};
+
 interface ContainerInfoProps {
   containerData: any;
   filteredCard: any,
@@ -47,20 +71,20 @@ const ContainerInfo: React.FC<ContainerInfoProps> = ({ containerData, filteredCa
           // Card for Container Events
           return containerData.containers.map((event:any) => 
             <Card key={card.id} title={"Shipment Status"} gridArea={filteredCard.length < 4 ? null : card.gridArea}>
-              <ContainerEvents containerEvent={event.events} selectedDate={selectedDate} />
+              <ContainerEvents containerEvent={groupEventsByLocation(event.events)} selectedDate={selectedDate} />
             </Card>
           )
         }
         else if (card.title.includes("Route")) {
           // Card for Map 
           return(
-          <Card key={card.id} title={"Where Is My Container?"} gridArea={filteredCard.length < 4 ? null : card.gridArea}>
+          <Card key={card.id} title={"My Container's Route"} gridArea={filteredCard.length < 4 ? null : card.gridArea}>
             <div>
 
             <LazyMap 
               route={containerData.route_data.route}
-              firstCoordinateFacility={containerData.containers[0].events[0].facility.name} // This should come from route probably but I could only extract it from events
-              lastCoordinateFacility={containerData.containers[0].events[containerData.containers[0].events.length -1].facility.name} // Same here
+              facilities={groupEventsByLocation(containerData.containers[0].events)}
+              selectedDate={selectedDate}
             />
             </div>
           </Card>)

@@ -35,6 +35,10 @@
     line-height: 0.5 !important;
 }
 
+.leaflet-alt-icon {
+    filter: grayscale(100%);
+}
+
 /* Media query for mobile screens */
 @media (max-width: 767px) {
     .leaflet-container {
