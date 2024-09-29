@@ -75,7 +75,7 @@ The app will be available at http://localhost:3000.
 
 ### Date Picker Simulation
 
-The app features a `Date Picker` in the [`Sidebar`](./src/components/Sidebar.tsx) to simulate the current day. This allows you to navigate through the [`Stepper`](./src/components/Stepper.tsx) component, which shows container events chronologically.
+The app features a `Date Picker` in the [`Sidebar`](./src/components/Sidebar.tsx) component to simulate the current day. This allows you to navigate through the [`Stepper`](./src/components/Stepper.tsx) component, which shows container events chronologically.
 
 - **Purpose**: The `Date Picker` is used to simulate different days for testing the stepper navigation.
 - **How it Works**: By selecting a date, you can simulate the current day and navigate between events in the container's lifecycle via the stepper.
@@ -91,7 +91,7 @@ The `Search Bar` in the [Navigation](./src/components/Navigation.tsx) component 
 
 ### Sidebar
 
-The [`Sidebar`](./src/components/Sidebar.tsx) manages two key features:
+The [`Sidebar`](./src/components/Sidebar.tsx) component manages two key features:
 
 - **Dark Mode Toggle**: Allows users to switch between dark and light modes.
 - **Date Picker**: : Used to simulate the current date for the stepper navigation.
