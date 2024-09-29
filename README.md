@@ -18,7 +18,7 @@ The **Container Tracking App** is a React-based application designed to display 
 ```bash
 src/
  ├── components/
- │    ├── Card.tsx              # Card component for displaying container information
+ │    ├── Card.tsx               # Card component for displaying container information
  │    ├── ContainerInfo.tsx      # Container information component
  │    ├── ContainerEvents.tsx    # Container events component
  │    ├── ContainerMap.tsx       # Map displaying container route
