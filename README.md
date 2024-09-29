@@ -114,7 +114,7 @@ The `Dark Mode Toggle` is available in the navigation bar, allowing users to swi
 
 ## Deployment
 
-This app is currently deployed through Netlify as a netlify.app subdomain under the URL [`Container Tracking Information`](https://containertrackinginformation.netlify.app/).
+This app is currently deployed through [`Netlify`](https://app.netlify.com/) as a netlify.app subdomain under the URL [`Container Tracking Information`](https://containertrackinginformation.netlify.app/).
 
 ## License
 
