@@ -42,20 +42,20 @@ const ContainerInfo: React.FC<ContainerInfoProps> = ({ containerData, filteredCa
   return (
     <div className={`container-info ${isDarkMode ? 'dark-mode' : ''}`} style={filteredCard.length < 4 ? (filteredCard > 1 ? {gridTemplateAreas: "inherit"}: {gridTemplateAreas: "inherit", gridTemplateColumns: '1fr 1fr'}) : {}}>
       {filteredCard && filteredCard.map((card:any) => {
-        if (card.title.includes("Details") ) {
+        if (card.name.includes("Details") ) {
           // Card for Container Details 
           return(
-            <Card key={card.id} title={card.title.replace("Details", "")} gridArea={filteredCard.length < 4 ? null : card.gridArea}>
+            <Card key={card.id} title={card.title.replace("Details", "")} gridArea={filteredCard.length < 4 ? 'unset' : card.gridArea}>
               <p><strong>Country:</strong> {containerData[card.gridArea+"_location"].country}</p>
               <p><strong>City:</strong> {containerData[card.gridArea+"_location"].name}</p>
               <p><strong>State:</strong> {containerData[card.gridArea+"_location"].state}</p>
             </Card>
           )
         }
-        else if (card.title.includes("Info")) {
+        else if (card.name.includes("Info")) {
           // Card for Container Information 
           return(
-            <Card key={card.id} title={card.title.replace("Container ", "")} gridArea={filteredCard.length < 4 ? null : card.gridArea}>
+            <Card key={card.id} title={card.title.replace("Container ", "")} gridArea={filteredCard.length < 4 ? 'unset' : card.gridArea}>
               <p><strong>Container Shipment Number:</strong> {containerData.shipment_number}</p>
               <p><strong>Status:</strong> 
               {containerData.status.split("_").map((str: string) => {
@@ -67,18 +67,18 @@ const ContainerInfo: React.FC<ContainerInfoProps> = ({ containerData, filteredCa
             </Card>
           )
         }
-        else if (card.title.includes("Event")) {
+        else if (card.name.includes("Event")) {
           // Card for Container Events
           return containerData.containers.map((event:any) => 
-            <Card key={card.id} title={"Shipment Status"} gridArea={filteredCard.length < 4 ? null : card.gridArea}>
+            <Card key={card.id} title={"Shipment Status"} gridArea={filteredCard.length < 4 ? 'unset' : card.gridArea}>
               <ContainerEvents containerEvent={groupEventsByLocation(event.events)} selectedDate={selectedDate} />
             </Card>
           )
         }
-        else if (card.title.includes("Route")) {
+        else if (card.name.includes("Route")) {
           // Card for Map 
           return(
-          <Card key={card.id} title={"My Container's Route"} gridArea={filteredCard.length < 4 ? null : card.gridArea}>
+          <Card key={card.id} title={"My Container's Route"} gridArea={filteredCard.length < 4 ? 'unset' : card.gridArea}>
             <div>
 
             <LazyMap 

@@ -1,9 +1,9 @@
 {
     "cards":[
-        {"title": "Container Information", "gridArea": "info", "id": "1", "visibility":true},
-        {"title": "Origin Details", "gridArea": "origin", "id": "2", "visibility":true},
-        {"title": "Destination Details", "gridArea": "destination", "id": "3", "visibility":true},
-        {"title": "Container Events", "gridArea": "events", "id": "4", "visibility":true},
-        {"title": "Container Route", "gridArea": "route", "id": "5", "visibility":true}
+        {"name": "Container Information", "title": "Information", "gridArea": "info", "id": "1", "visibility":true},
+        {"name": "Origin Details", "title": "Origin", "gridArea": "origin", "id": "2", "visibility":true},
+        {"name": "Destination Details", "title": "Destination", "gridArea": "destination", "id": "3", "visibility":true},
+        {"name": "Container Events", "title": "Shipment Status", "gridArea": "events", "id": "4", "visibility":true},
+        {"name": "Container Route", "title": "My Container's Route", "gridArea": "route", "id": "5", "visibility":true}
     ]
 }
