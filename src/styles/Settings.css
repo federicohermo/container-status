@@ -143,7 +143,13 @@
 
 @media (max-width: 767px) {
     .open {
-        width: 200px;
+        width: 220px;
+        padding: 5px 10px !important;
+        padding: 9px 10px !important;
+        margin-left: -190px !important;
+    }
+    .searchbar {
+        padding: 0px 7.5px;
     }
   }
 

@@ -20,7 +20,15 @@
   .card {
     grid-area: unset !important;
   }
-} 
+}
+
+@media (max-width: 767px) {
+  .card {
+    grid-area: unset !important;
+    min-width: 90% !important;
+    margin-left: 0px !important;
+  }
+}
 
 .card.dark-mode {
   background-color: var(--card-bg-color-dark);

@@ -35,6 +35,10 @@
 @media (max-width: 767px) {
     .sidebar {
         padding: 60px 0px !important;
+        max-width: 20% !important;
+    }
+    .toggle {
+        transform: translateX(10%) !important;
     }
   }
 

@@ -53,6 +53,5 @@ h1 {
 @media (max-width: 767px) {
   .app-title {
       font-size: 1rem !important;
-      width: 0px;
   }
 }
